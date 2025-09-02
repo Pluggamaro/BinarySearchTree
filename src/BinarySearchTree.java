@@ -87,6 +87,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
             //if node has both children left and right, then find in-order successor
 
             T lowestValue = findSmallest(currentNode.right);
+            //replacing current node with successor from above
+            currentNode.data = lowestValue;
+            //now deleting from the right node
+            currentNode.right = deleteRecursive(currentNode.right, lowestValue);
 
         }
 
