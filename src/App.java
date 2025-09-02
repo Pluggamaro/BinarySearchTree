@@ -3,6 +3,7 @@ public class App {
         //Instantiating BST with type Integer
         BinarySearchTree<Integer> binarySearchObject = new BinarySearchTree<>();
 
+        System.out.println("****************BINARY SEARCH TREE****************");
         System.out.println("========Node INSERTION========");
         binarySearchObject.insert(50);
         binarySearchObject.insert(30);
@@ -16,8 +17,8 @@ public class App {
 
         System.out.println("========Searching TREE========");
 
-        System.out.println("Search :" + (binarySearchObject.search(40) ? "FOUND!" : "NOT FOUND!"));
-        System.out.println("Search :" + (binarySearchObject.search(90) ? "FOUND!" : "NOT FOUND!"));
+        System.out.println("Search 40 :" + (binarySearchObject.search(40) ? "FOUND!" : "NOT FOUND!"));
+        System.out.println("Search 90 :" + (binarySearchObject.search(90) ? "FOUND!" : "NOT FOUND!"));
 
         System.out.println("========Delete NODES========");
 

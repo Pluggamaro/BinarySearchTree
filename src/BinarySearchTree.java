@@ -108,6 +108,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     public void inOrder(){
         System.out.print("Orderly: ");
         orderlyRecursive(root);
+        System.out.println();
     }
 
     //orderly recursive helper
@@ -124,6 +125,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         //order is root -> left -> right
         System.out.print("Pre-Order: " );
         preOrderlyRecursive(root);
+        System.out.println();
     }
 
     private void preOrderlyRecursive(TreeNode<T> node){
@@ -139,7 +141,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         //ultimately left -> right -> root
         System.out.print("Post-Order: ");
         postOrderly(root);
-
+        System.out.println();
     }
 
     private void postOrderly(TreeNode<T> node){
