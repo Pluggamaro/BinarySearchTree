@@ -64,12 +64,25 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
         int compare = newData.compareTo(currentNode.data);
 
-        //avigating node of deletion
+        //navigating node of deletion
         if(compare < 0){
             currentNode.left = deleteRecursive(currentNode.left, newData);
         }else if(compare > 0){
             currentNode.right = deleteRecursive(currentNode.right, newData);
         }else{
+            //an empty node with no children
+            if(currentNode.left == null && currentNode.right == null){
+                return null;
+            }
+
+            //if right node is empty brign forth left node vice versa
+            if(currentNode.right == null){
+                return currentNode.left;
+            }
+
+            if(currentNode.left == null){
+                return currentNode.right;
+            }
 
         }
 
