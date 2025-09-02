@@ -53,8 +53,27 @@ public class BinarySearchTree<T extends Comparable<T>> {
             : searchRecursive(currentNode.right, newData);
     }
 
+    public void delete(T data){
+        root = deleteRecursive(root, data);
+    }
+
     private RootNode<T> deleteRecursive(RootNode<T> currentNode, T newData){
-        
+        if(currentNode == null){
+            return null;
+        }
+
+        int compare = newData.compareTo(currentNode.data);
+
+        //avigating node of deletion
+        if(compare < 0){
+            currentNode.left = deleteRecursive(currentNode.left, newData);
+        }else if(compare > 0){
+            currentNode.right = deleteRecursive(currentNode.right, newData);
+        }else{
+
+        }
+
+        return currentNode;
     }
 
 }
