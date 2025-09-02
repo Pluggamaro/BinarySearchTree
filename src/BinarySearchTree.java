@@ -24,7 +24,25 @@ public class BinarySearchTree<T extends Comparable<T>> {
         //negatives on left side of tree and positives on right
         if(compare < 0){
             currentNode.left = insertRecursive(currentNode.left, newData);
+        }else if(compare > 0){
+            currentNode.right = insertRecursive(currentNode.right, newData);
         }
+
         return currentNode;
     }
+
+    //tree search method
+    public boolean search(T data) {
+        return false;
+    }
+
+    //recursive search helper
+    private boolean searchRecursive(RootNode<T> currentNode, T newData){
+        //base case
+        if(currentNode == null){
+            return false;
+        }
+        return false;
+    }
+
 }
