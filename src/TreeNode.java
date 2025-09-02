@@ -1,10 +1,10 @@
-public class RootNode<T extends Comparable<T>> {
+public class TreeNode<T extends Comparable<T>> {
     T data;
     //left and right extension of node
-    RootNode<T> left;
-    RootNode<T> right;
+    TreeNode<T> left;
+    TreeNode<T> right;
 
-    public RootNode(T data){
+    public TreeNode(T data){
         this.data = data;
         this.left = null;
         this.right = null;

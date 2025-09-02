@@ -1,6 +1,6 @@
 public class BinarySearchTree<T extends Comparable<T>> {
     //defining root
-    private RootNode<T> root;
+    private TreeNode<T> root;
     
     public BinarySearchTree(){
         this.root = null;
@@ -12,10 +12,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     //helper method for insertion
-    private RootNode<T> insertRecursive(RootNode<T> currentNode, T newData){
+    private TreeNode<T> insertRecursive(TreeNode<T> currentNode, T newData){
         //if currentNode is null then newData is 
         if(currentNode == null){
-            return new RootNode<>(newData);
+            return new TreeNode<>(newData);
         }
 
         //otherwise compare new data to root node for traversal route
@@ -37,7 +37,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     //recursive search helper
-    private boolean searchRecursive(RootNode<T> currentNode, T newData){
+    private boolean searchRecursive(TreeNode<T> currentNode, T newData){
         //base case
         if(currentNode == null){
             return false;
@@ -57,7 +57,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         root = deleteRecursive(root, data);
     }
 
-    private RootNode<T> deleteRecursive(RootNode<T> currentNode, T newData){
+    private TreeNode<T> deleteRecursive(TreeNode<T> currentNode, T newData){
         if(currentNode == null){
             return null;
         }
@@ -99,7 +99,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     // recursive helper method for finding lowest value on the left-most side
 
-    private T findSmallest(RootNode<T> root){
+    private T findSmallest(TreeNode<T> root){
         return root.left == null ? root.data :findSmallest(root.left);
     }
 
@@ -111,7 +111,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
     }
 
     //orderly recursive helper
-    private void orderlyRecursive(RootNode<T> node){
+    private void orderlyRecursive(TreeNode<T> node){
         if(node != null){
             //placing nodes on either side and root in center
             orderlyRecursive(node.left);
@@ -126,7 +126,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
         preOrderlyRecursive(root);
     }
 
-    private void preOrderlyRecursive(RootNode<T> node){
+    private void preOrderlyRecursive(TreeNode<T> node){
         //here root is shifted to beginning
         if(node != null){
             System.out.print(node.data+" ");
@@ -142,7 +142,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     }
 
-    private void postOrderly(RootNode<T> node){
+    private void postOrderly(TreeNode<T> node){
         if(node != null){
             postOrderly(node.left);
             postOrderly(node.right);
