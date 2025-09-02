@@ -23,5 +23,9 @@ public class App {
 
         binarySearchObject.delete(20);
         binarySearchObject.inOrder();
+
+        System.out.println("====DELETE ROOT====");
+        binarySearchObject.delete(50);
+        binarySearchObject.inOrder();
     }
 }
