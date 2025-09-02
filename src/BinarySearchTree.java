@@ -122,7 +122,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     public void preOrder(){
         //order is root -> left -> right
-        System.out.print("preOrderly: " );
+        System.out.print("Pre-Order: " );
         preOrderlyRecursive(root);
     }
 
