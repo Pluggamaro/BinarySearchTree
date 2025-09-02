@@ -33,7 +33,7 @@ public class BinarySearchTree<T extends Comparable<T>> {
 
     //tree search method
     public boolean search(T data) {
-        return false;
+        return searchRecursive(root, data);
     }
 
     //recursive search helper

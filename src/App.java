@@ -13,5 +13,9 @@ public class App {
         binarySearchObject.insert(80);
 
         binarySearchObject.inOrder();
+
+        System.out.println("========Searching TREE========");
+
+        System.out.println("Search :" + binarySearchObject.search(40) ? "FOUND!" : "NOT FOUND!");
     }
 }
