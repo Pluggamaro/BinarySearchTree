@@ -93,4 +93,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return currentNode;
     }
 
+    // recursive helper method for finding lowest value on the left-most side
+
+    private T findSmallest(RootNode<T> root){
+        return root.left == null ? root.data :findSmallest(root.left);
+    }
+
 }
