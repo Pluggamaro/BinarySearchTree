@@ -103,4 +103,19 @@ public class BinarySearchTree<T extends Comparable<T>> {
         return root.left == null ? root.data :findSmallest(root.left);
     }
 
+    //traversals
+
+    public void inOrder(){
+        //order should be left -> root -> right
+    }
+
+    public void preOrder(){
+        //order is root -> left -> right
+    }
+
+    public void postOrder(){
+        //ultimately left -> right -> root
+    }
+
+
 }
