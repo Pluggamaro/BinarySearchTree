@@ -21,11 +21,13 @@ public class App {
         System.out.println("Search 90 :" + (binarySearchObject.search(90) ? "FOUND!" : "NOT FOUND!"));
 
         System.out.println("========Delete NODES========");
+        System.out.println("Deleting 20...");
 
         binarySearchObject.delete(20);
         binarySearchObject.inOrder();
 
         System.out.println("====DELETE ROOT====");
+        System.out.println("Deleting 50...");
         binarySearchObject.delete(50);
         binarySearchObject.inOrder();
 
