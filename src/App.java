@@ -27,5 +27,11 @@ public class App {
         System.out.println("====DELETE ROOT====");
         binarySearchObject.delete(50);
         binarySearchObject.inOrder();
+
+        System.out.println("========PRE-ORDER========");
+        binarySearchObject.preOrder();
+
+        System.out.println("========POST-ORDER========");
+        binarySearchObject.postOrder();
     }
 }
