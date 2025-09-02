@@ -42,7 +42,15 @@ public class BinarySearchTree<T extends Comparable<T>> {
         if(currentNode == null){
             return false;
         }
-        return false;
+
+        //data found 
+        if(newData.equals(currentNode.data)){
+            return true;
+        }
+
+        return newData.compareTo(currentNode.data) < 0 
+            ? searchRecursive(currentNode.left, newData)
+            : searchRecursive(currentNode.right, newData);
     }
 
 }
