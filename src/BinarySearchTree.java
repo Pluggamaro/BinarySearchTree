@@ -84,6 +84,10 @@ public class BinarySearchTree<T extends Comparable<T>> {
                 return currentNode.right;
             }
 
+            //if node has both children left and right, then find in-order successor
+
+            T lowestValue = findSmallest(currentNode.right);
+
         }
 
         return currentNode;
