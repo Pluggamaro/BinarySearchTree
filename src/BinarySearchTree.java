@@ -53,4 +53,8 @@ public class BinarySearchTree<T extends Comparable<T>> {
             : searchRecursive(currentNode.right, newData);
     }
 
+    private RootNode<T> deleteRecursive(RootNode<T> currentNode, T newData){
+        
+    }
+
 }
