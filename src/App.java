@@ -16,6 +16,9 @@ public class App {
 
         System.out.println("========Searching TREE========");
 
-        System.out.println("Search :" + binarySearchObject.search(40) ? "FOUND!" : "NOT FOUND!");
+        System.out.println("Search :" + (binarySearchObject.search(40) ? "FOUND!" : "NOT FOUND!"));
+        System.out.println("Search :" + (binarySearchObject.search(90) ? "FOUND!" : "NOT FOUND!"));
+
+        
     }
 }
